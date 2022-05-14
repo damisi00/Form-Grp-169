@@ -13,9 +13,69 @@
         
     </nav>
     <main class="">
-        <form>
-            
-
+        <form class="w-60 mx-auto px-2 pb-4">
+        <h4 class="py-3 fw-bold">Registration</h4>
+        <div class="form-group row mb-2">
+            <div class="col-md-6">
+                <label for="full-name" class="fw-bold py-1">
+                    Full Name
+                </label>
+                <input type="text" name="full-name" id="full-name" placeholder="Enter your name" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+                <label for="username" class="fw-bold py-1">
+                    Username
+                </label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <div class="col-md-6">
+                <label for="email" class="fw-bold py-1">
+                    Email Address
+                </label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+                <label for="phone-no" class="fw-bold py-1">
+                    Phone Number
+                </label>
+                <input type="tel" name="phone-no" id="phone-no" placeholder="Enter your number" class="form-control"/>
+            </div>
+        </div>
+        
+        <div class="form-group row mb-2">
+            <div class="col-md-6">
+                <label for="password" class="fw-bold py-1">
+                    Password
+                </label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+                <label for="confirm-pwd" class="fw-bold py-1">
+                    Confirm Password
+                </label>
+                <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder="Confirm your password" class="form-control"/>
+            </div>
+        </div>
+        <div class="form-group row ">
+            <h5 class="my-2">Gender</h5>
+            <div class="col-10 d-flex justify-content-between mb-4">
+                <div class="rad">
+                    <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Male</label>
+                </div>
+                <div class="rad">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="rad">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Prefer not to say</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="row col-12 text-center fw-bold py-2">Register</button>
         </form>
     </main>
     <script src="./js/bootstrap.min.js"></script>
