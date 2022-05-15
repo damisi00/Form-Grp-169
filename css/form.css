@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#landing-main{
+    background: url(../images/kyle-johnson-8Gl7Ew-q6D8-unsplash.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .w-60{
@@ -12,8 +19,41 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     width: 100%;
+}
+
+.main-form, button{
+    background-image: linear-gradient(to right,#79A4D9, #906DBD)
+}
+
+h4::first-letter, .letter-e{
+     
+    border-bottom: 2px solid #906DBD;
+}
+.pos-pwd{
+    position: relative;
+}
+
+.pos-pwd i{
+    cursor: pointer;
+    position: absolute;
+    right: 1.2rem;
+    bottom: 0.5rem;
+    color: #79A4D9;
+}
+
+.pos-pwd i:focus, .pos-pwd i:active{
+    color: #906dbd;
+}
+
+form{
+    background-color: #fcfcfc;
+    border-radius: 3px;
+}
+
+::placeholder{
+    color: #555267;
 }
 
 nav{
@@ -110,6 +150,9 @@ nav .logo h1{
 @media(max-width: 450px){
     nav{
         height: 5rem;
+    }
+    form{
+        width: 90% !important;
     }
 }
 
