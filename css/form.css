@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+nav{
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    height: 3.4rem;
+    /* position: fixed;
+    width: 100%; */
+    /* z-index: 1; */
+}
+
+
+nav .mainMenu{
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: .9rem;
+}
+
+nav .mainMenu li a:hover{
+    background: rgb(255, 94, 0);
+    color: chartreuse;
+}
+
+nav .openMenu{
+    font-size: 2rem;
+    margin: 20px;
+    margin-top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo h1{
+    margin: 6px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+
+@media(max-width: 800px){
+    /* nav{
+        height: 8rem;
+    } */
+
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu{
+        display: block;
+    }
+
+    nav .mainMenu li a:hover{
+        background: none;
+        color: rgb(255, 123, 0);
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width: 450px){
+    nav{
+        height: 5rem;
+    }
+}
+
+@media(max-width: 280px){
+    nav{
+        height: 7rem;
+    }
+}
+
+@media(max-width: 235px){
+    nav{
+        height: 8rem;
+    }
+}
