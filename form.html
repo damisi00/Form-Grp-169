@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0c4d6ce46a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Form validation</title>
 </head>
 <body>
@@ -21,78 +22,84 @@
         <div class="openMenu"><i class="fa fa-bars"></i></div>
         <ul class="mainMenu">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Team Members</a></li>
+            <li><a href="./about.html">About Us</a></li>
             <li><a href="#">Form</a></li>
             <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
     </nav>
     <main class="main-form py-5">
-        <form class="w-60 mx-auto px-4 pb-4 ">
-        <h4 class="py-3 fw-bold">R<span class="letter-e">e</span>gistration</h4>
-        <div class="form-group row mb-2">
-            <div class="col-md-6">
-                <label for="full-name" class="fw-bold py-1">
-                    Full Name
-                </label>
-                <input type="text" name="full-name" id="full-name" placeholder="Enter your name" class="form-control"/>
-            </div>
-            <div class="col-md-6">
-                <label for="username" class="fw-bold py-1">
-                    Username
-                </label>
-                <input type="text" name="username" id="username" placeholder="Enter your username" class="form-control"/>
-            </div>
-        </div>
-        <div class="form-group row mb-2">
-            <div class="col-md-6">
-                <label for="email" class="fw-bold py-1">
-                    Email Address
-                </label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control"/>
-            </div>
-            <div class="col-md-6">
-                <label for="phone-no" class="fw-bold py-1">
-                    Phone Number
-                </label>
-                <input type="tel" name="phone-no" id="phone-no" placeholder="Enter your number" class="form-control"/>
-            </div>
-        </div>
-        
-        <div class="form-group row mb-2">
-            <div class="col-md-6 pos-pwd">
-                <label for="password" class="fw-bold py-1">
-                    Password
-                </label>
-                <input type="password" name="password" id="password" placeholder="Enter your password" class="form-control"/>
-                <i class="bi bi-eye-slash" id="togglePwd"></i>
-            </div>
-            <div class="col-md-6 pos-pwd">
-                <label for="confirmwd" class="fw-bold py-1">
-                    Confirm Password
-                </label>
-                <input type="password" name="confirmPwd" id="confirmPwd" placeholder="Confirm your password" class="form-control"/>
-                <i class="bi bi-eye-slash" id="toggleConfirmPwd"></i>
-            </div>
-        </div>
-        <div class="form-group row ">
-            <h5 class="my-2">Gender</h5>
-            <div class="col-md-10 d-flex justify-content-between mb-4">
-                <div class="rad">
-                    <input type="radio" id="male" name="gender" value="male" />
-                    <label for="male">Male</label>
+        <form class="w-60 mx-auto px-4 pb-4" id="form">
+            <h4 class="py-3 fw-bold">R<span class="letter-e">e</span>gistration</h4>
+            <p><span class="text-danger" style="font-size: 20px;">'*' </span>  is compulsory.</p>
+            <div class="form-group row mb-2">
+                <div class="col-md-6 input-control">
+                    <label for="fullname" class="fw-bold py-1">
+                        Full Name<span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="full-name" id="fullname" placeholder="Ciroma Chukwuma" class="form-control"/>
+                    <div class="error"></div>
                 </div>
-                <div class="rad">
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                </div>
-                <div class="rad">
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Prefer not to say</label>
+                <div class="col-md-6 input-control">
+                    <label for="username" class="fw-bold py-1">
+                        Username<span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="username" id="username" placeholder="Hadijat545" class="form-control"/>
+                    <div class="error"></div>
                 </div>
             </div>
-        </div>
-        <button type="submit" class="col-12 text-center text-white border-0 rounded fw-bold py-2 mb-4" id="submit">Register</button>
+            <div class="form-group row mb-2">
+                <div class="col-md-6 input-control">
+                    <label for="email" class="fw-bold py-1">
+                        Email Address<span class="text-danger">*</span>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="Lukman426@yahoo.com" class="form-control"/>
+                    <div class="error"></div>
+                </div>
+                <div class="col-md-6 input-control">
+                    <label for="phone" class="fw-bold py-1">
+                        Phone Number<span class="text-danger">*</span>
+                    </label>
+                    <input type="tel" name="phone-no" id="phone" placeholder="07056731452" class="form-control"/>
+                    <div class="error"></div>
+                </div>
+            </div>
+            
+            <div class="form-group row mb-2">
+                <div class="col-md-6 pos-pwd input-control">
+                    <label for="password" class="fw-bold py-1">
+                        Password<span class="text-danger">*</span>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" class="form-control"/>
+                    <div class="error"></div>
+                    <i class="bi bi-eye-slash" id="togglePwd"></i>
+                </div>
+                <div class="col-md-6 pos-pwd input-control">
+                    <label for="password2" class="fw-bold py-1">
+                        Confirm Password<span class="text-danger">*</span>
+                    </label>
+                    <input type="password" name="confirmPwd" id="password2" placeholder="Confirm your password" class="form-control"/>
+                    <div class="error"></div>
+                    <i class="bi bi-eye-slash" id="toggleConfirmPwd"></i>
+                </div>
+            </div>
+            <div class="form-group row ">
+                <h5 class="my-2">Gender</h5>
+                <div class="col-md-10 d-flex justify-content-between mb-4">
+                    <div class="rad">
+                        <input type="radio" id="male" name="gender" value="male"/>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="rad">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="rad">
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Non-Binary</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="col-12 text-center text-white border-0 rounded fw-bold py-2 mb-4" id="submit">Register</button>
         </form>
     </main>
     <script src="./js/bootstrap.min.js"></script>
