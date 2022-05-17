@@ -28,8 +28,11 @@ body{
 }
 
 .main-form, button{
-    background-image: linear-gradient(to right,#79A4D9, #906DBD)
+    background-image: linear-gradient(to right,#79A4D9, #906DBD);
 }
+
+button:hover, button:focus, button:active{
+    background-image: linear-gradient(to right,#906DBD, #79A4D9);
 
 h4::first-letter, .letter-e{
      
