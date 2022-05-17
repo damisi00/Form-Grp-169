@@ -33,7 +33,7 @@ body{
 
 button:hover, button:focus, button:active{
     background-image: linear-gradient(to right,#906DBD, #79A4D9);
-
+}
 h4::first-letter, .letter-e{
      
     border-bottom: 2px solid #906DBD;
